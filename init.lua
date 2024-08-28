@@ -178,8 +178,12 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 vim.keymap.set('n', '<leader>pv', vim.cmd.Ex, { desc = 'Open File Explorer' })
 
 -- Quick fix navigation
-vim.keymap.set('n', '<C-k>', '<cmd>cprev<CR>')
-vim.keymap.set('n', '<C-j>', '<cmd>cnext<CR>')
+vim.keymap.set('n', '<C-k>', '<cmd>cprev<CR>', { desc = 'Previous item in quickfix list' })
+vim.keymap.set('n', '<C-j>', '<cmd>cnext<CR>', { desc = 'Next item in quickfix list' })
+
+-- Location navigation
+vim.keymap.set('n', '<leader>pk', '<cmd>lprev<CR>', { desc = 'Previous item in location list' })
+vim.keymap.set('n', '<leader>pj', '<cmd>lnext<CR>', { desc = 'Next item in location list' })
 
 -- New tab
 vim.keymap.set('n', '<C-t>', '<cmd>tabnew<CR>')
