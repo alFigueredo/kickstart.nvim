@@ -33,7 +33,7 @@ vim.opt.shiftwidth = 4
 vim.opt.smartindent = true
 
 -- Enable mouse mode, can be useful for resizing splits for example!
--- vim.opt.mouse = 'a'
+vim.opt.mouse = ''
 
 -- Don't show the mode, since it's already in the status line
 vim.opt.showmode = false
@@ -803,7 +803,8 @@ require('lazy').setup({
       highlight = {
         enable = true,
         -- FIX: C language is failing for some reason.
-        disable = { 'c', 'cpp' },
+        -- disable = { 'c' },
+        --
         -- Some languages depend on vim's regex highlighting system (such as Ruby) for indent rules.
         --  If you are experiencing weird indenting issues, add the language to
         --  the list of additional_vim_regex_highlighting and disabled languages for indent.
