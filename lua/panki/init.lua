@@ -1,5 +1,5 @@
-require 'utnso.set'
-require 'utnso.remap'
+require 'panki.set'
+require 'panki.remap'
 
 -- Set filetypes
 vim.filetype.add {
@@ -32,7 +32,7 @@ vim.opt.rtp:prepend(lazypath)
 
 -- NOTE: Here is where you install your plugins.
 require('lazy').setup({
-  spec = 'utnso.lazy',
+  spec = 'panki.lazy',
   change_detection = { notify = false },
 }, {
   ui = {
