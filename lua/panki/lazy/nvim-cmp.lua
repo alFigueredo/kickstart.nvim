@@ -49,6 +49,9 @@ return {
         },
         completion = { completeopt = 'menu,menuone,noinsert' },
 
+        -- Config number of entries
+        performance = vim.tbl_deep_extend('force', cmp.get_config().performance, { max_view_entries = 7 }),
+
         -- For an understanding of why these mappings were
         -- chosen, you will need to read `:help ins-completion`
         --
