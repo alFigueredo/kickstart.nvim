@@ -8,8 +8,8 @@ return {
       auto_install = true,
       highlight = {
         enable = true,
-        -- FIX: C language is failing for some reason.
-        -- disable = { 'c' },
+        -- FIX: latex language is failing for some reason.
+        disable = { 'latex' },
         --
         -- Some languages depend on vim's regex highlighting system (such as Ruby) for indent rules.
         --  If you are experiencing weird indenting issues, add the language to
