@@ -20,7 +20,6 @@ return {
       { 'mason-org/mason.nvim', opts = {} }, -- NOTE: Must be loaded before dependants
       'mason-org/mason-lspconfig.nvim',
       'WhoIsSethDaniel/mason-tool-installer.nvim',
-      'mfussenegger/nvim-jdtls',
 
       -- Useful status updates for LSP.
       -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
@@ -220,7 +219,6 @@ return {
         -- But for many setups, the LSP (`tsserver`) will work just fine
         -- tsserver = {},
         --
-
         jdtls = {},
 
         lua_ls = {
@@ -238,12 +236,6 @@ return {
           },
         },
       }
-
-      local config = {
-        cmd = { '/home/pankimint/.local/share/nvim/mason/bin/jdtls' },
-        root_dir = vim.fs.dirname(vim.fs.find({ 'gradlew', '.git', 'mvnw' }, { upward = true })[1]),
-      }
-      require('jdtls').start_or_attach(config)
 
       -- Ensure the servers and tools above are installed
       --  To check the current status of installed tools and/or manually install
@@ -279,4 +271,5 @@ return {
       }
     end,
   },
+  'mfussenegger/nvim-jdtls',
 }
