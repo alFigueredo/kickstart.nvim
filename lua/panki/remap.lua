@@ -10,6 +10,8 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 
 -- Go to the explorer
 vim.keymap.set('n', '<leader>pv', vim.cmd.Ex, { desc = 'Open File Explorer' })
+-- Go to Oil explorer
+vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open Oil Explorer' })
 
 -- Quick fix navigation
 vim.keymap.set('n', '<leader>pk', '<cmd>cprev<CR>', { desc = 'Previous item in quickfix list' })
