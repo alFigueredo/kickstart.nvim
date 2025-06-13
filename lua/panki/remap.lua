@@ -34,6 +34,9 @@ vim.keymap.set('n', '<C-x>', '<cmd>bdel<CR>')
 -- Default format
 vim.keymap.set('n', '<leader>pf', 'gg=G<C-o>', { desc = 'Format buffer vith vim' })
 
+-- Remap <Esc> to <C-c>
+vim.keymap.set('i', '<C-c>', '<Esc>', { desc = 'Remap <Esc> key' })
+
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
 -- is not what someone will guess without a bit more experience.
