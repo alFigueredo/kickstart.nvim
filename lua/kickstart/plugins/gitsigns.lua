@@ -50,6 +50,9 @@ return {
         map('n', '<leader>hb', gitsigns.blame_line, { desc = 'git [b]lame line' })
         map('n', '<leader>hd', gitsigns.diffthis, { desc = 'git [d]iff against index' })
         map('n', '<leader>hq', gitsigns.setqflist, { desc = 'git set [q]uickfix list of hunks' })
+        map('n', '<leader>hQ', function()
+          gitsigns.setqflist 'all'
+        end, { desc = 'git set [q]uickfix list of hunks' })
         map('n', '<leader>hl', gitsigns.setloclist, { desc = 'git set [l]ocation list of hunks' })
         map('n', '<leader>hD', function()
           gitsigns.diffthis '@'
