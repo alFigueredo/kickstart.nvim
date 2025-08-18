@@ -52,7 +52,7 @@ return {
         http = { 'kulala-fmt' },
 
         -- ruby
-        ruby = { 'standardrb', 'rubocop' },
+        ruby = { 'standardrb', 'rubocop', stop_after_first = true },
 
         -- c / c++
         c = { 'clang-format' },
