@@ -7,7 +7,7 @@ return {
       {
         '<leader>f',
         function()
-          require('conform').format { async = true, lsp_format = fallback }
+          require('conform').format { async = true, lsp_format = 'fallback' }
         end,
         mode = '',
         desc = '[F]ormat buffer',
@@ -25,7 +25,7 @@ return {
           return nil
         else
           return {
-            timeout_ms = 500,
+            timeout_ms = 700,
             lsp_format = 'fallback',
           }
         end
@@ -36,14 +36,33 @@ return {
         -- python = { "isort", "black" },
         --
         -- You can use 'stop_after_first' to run the first available formatter from the list
+
+        -- js / ts
         javascript = { 'prettierd', 'prettier', stop_after_first = true },
         javascriptreact = { 'prettierd', 'prettier', stop_after_first = true },
         typescript = { 'prettierd', 'prettier', stop_after_first = true },
         typescriptreact = { 'prettierd', 'prettier', stop_after_first = true },
         html = { 'prettierd', 'prettier', stop_after_first = true },
         css = { 'prettierd', 'prettier', stop_after_first = true },
+
+        -- json / yaml / md / http
         json = { 'prettierd', 'prettier', stop_after_first = true },
+        yaml = { 'prettierd', 'prettier', stop_after_first = true },
+        markdown = { 'prettierd', 'prettier', stop_after_first = true },
         http = { 'kulala-fmt' },
+
+        -- ruby
+        ruby = { 'standardrb', 'rubocop' },
+
+        -- c / c++
+        c = { 'clang-format' },
+        cpp = { 'clang-format' },
+        objc = { 'clang-format' },
+
+        -- shell
+        sh = { 'shfmt' },
+        bash = { 'shfmt' },
+        zsh = { 'shfmt' },
       },
     },
   },
