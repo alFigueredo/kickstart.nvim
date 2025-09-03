@@ -72,7 +72,7 @@ return {
         -- Document existing key chains
         spec = {
           { '<leader>c', group = '[C]ode', mode = { 'n', 'x' } },
-          { '<leader>d', group = '[D]ocument' },
+          { '<leader>d', group = '[Debug] and [D]ocument' },
           { '<leader>r', group = '[R]ename and [R]est' },
           { '<leader>s', group = '[S]earch' },
           { '<leader>w', group = '[W]orkspace' },
@@ -96,7 +96,7 @@ return {
     --  Here are some example plugins that I've included in the Kickstart repository.
     --  Uncomment any of the lines below to enable them (you will need to restart nvim).
     --
-    -- require 'kickstart.plugins.debug',
+    require 'kickstart.plugins.debug',
     -- require 'kickstart.plugins.indent_line',
     -- require 'kickstart.plugins.lint',
     require 'kickstart.plugins.autopairs',
