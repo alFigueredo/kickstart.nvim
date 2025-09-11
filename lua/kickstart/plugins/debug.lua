@@ -22,6 +22,7 @@ return {
     'jay-babu/mason-nvim-dap.nvim',
 
     -- Add your own debuggers here
+    'suketa/nvim-dap-ruby',
     -- 'leoluz/nvim-dap-go',
 
     -- Shows variable values inline as virtual text
@@ -148,6 +149,8 @@ return {
 
     -- Setup virtual text to show variable values inline
     require('nvim-dap-virtual-text').setup()
+
+    require('dap-ruby').setup()
 
     -- require('dap-go').setup {
     --   delve = {
